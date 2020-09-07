@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>House Administrator</title>
+    <link rel="stylesheet" href="{% static "css/inventoryapp.css" %}"/>
+  </head>
+  <body>
+    <h1>this is the index page from template</h1>
+    {{ items_list }}
+    <div class="">
+      {% if items_list %}
+      <table>
+        <thead>
+          <th>Room</th>
+          <th>Item</th>
+        </thead>
+        {% for it in items_list %}
+        <tr>
+          <td>{{ it.room }}</td>
+          <td>{{ it.item_name }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+
+      {% else %}
+      <p>Nothing to Show</p>
+      {% endif %}
+
+
+
+    </div>
+  </body>
+</html>
