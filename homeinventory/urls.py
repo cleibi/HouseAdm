@@ -21,6 +21,7 @@ from inventoryapp import views
 
 urlpatterns = [
     path('',views.index,name='index'),
-    path('inventoryapp/',include('inventoryapp.urls')),
     path('admin/', admin.site.urls),
+    path('inventoryapp/',include('inventoryapp.urls')),
+    path('rooms/',views.rooms,name='form_rooms')
 ]

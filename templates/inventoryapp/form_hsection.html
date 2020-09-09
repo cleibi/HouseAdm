@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rooms</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add a new Room:</h1>
+      <form class="" method="POST">
+
+
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" name="btn btn-primary" value="Submit">
+      </form>
+
+
+    </div>
+
+  </body>
+</html>
